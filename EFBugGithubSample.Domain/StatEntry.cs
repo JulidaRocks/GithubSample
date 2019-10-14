@@ -20,11 +20,14 @@ namespace EFBugGithubSample.Domain
         {
             get; private set;
         }
-        public float Value
+        public float Values
         {
             get; private set;
         }
-        public float Points => 10;
+        public float Points
+        {
+            get; private set;
+        }
         public DateTime QueryDate
         {
             get; private set;
@@ -39,14 +42,16 @@ namespace EFBugGithubSample.Domain
             Guid statId,
             Guid userId,
             DateTime queryDate,
-            float value,
+            float values,
+            float points,
             string referenceKey) : base(id)
         {
             this.StatId = statId;
             this.UserId = userId;
-            this.Value = value;
+            this.Values = values;
             this.ReferenceKey = referenceKey;
             this.QueryDate = queryDate;
+            this.Points = points;
         }
     }
 }

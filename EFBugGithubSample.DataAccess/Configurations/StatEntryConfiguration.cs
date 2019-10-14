@@ -18,9 +18,6 @@ namespace EFBugGithubSample.DataAccess.Configurations
             builder.HasOne(e => e.Stat)
                 .WithMany(u => u.StatEntries)
                 .HasForeignKey(e => e.StatId);
-
-            builder
-                .Ignore(e => e.Points);
         }
     }
 }

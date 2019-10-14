@@ -17,6 +17,10 @@ namespace EFBugGithubSample.Domain
         {
             get; private set;
         }
+        public float Points
+        {
+            get; private set;
+        }
         public Guid? StatId
         {
             get; private set;
@@ -36,12 +40,14 @@ namespace EFBugGithubSample.Domain
             Guid? statId,
             string name,
             string hint,
-            float requiredValue) : base(id)
+            float requiredValue,
+            float points) : base(id)
         {
             this.StatId = statId;
             this.Name = name;
             this.Hint = hint;
             this.RequiredValue = requiredValue;
+            this.Points = points;
         }
     }
 }
